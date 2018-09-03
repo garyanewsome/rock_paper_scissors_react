@@ -46,12 +46,18 @@ class Result extends Component {
     if(result !== ''){
       return (
         <div className="result-container">
+          <hr className="result-hr" />
           <h1>{result}</h1>
-          <button onClick={this.props.playAgainHandler} >Play Again?</button>
+          <button className="result-button" onClick={this.props.playAgainHandler} >¿ PLAY AGAIN ?<br/>¯\_(ツ)_/¯</button>
         </div>
       )
     }
-    return( <div></div> )
+    return(
+      <div className="result-container">
+        <hr className="result-hr" />
+        <h2>1 &#8230; 2 &#8230; 3 &#8230; SHOOT !!!</h2>
+      </div>
+    )
   }
 }
 

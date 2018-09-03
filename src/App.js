@@ -45,12 +45,19 @@ class App extends Component {
   }
   render() {
     return (
-      <div className="container">
-        <h1>Rock, Paper, Scissors</h1>
-        <h2>1, 2, 3, shoot!</h2>
-        <User userSelectionHandler={this.userSelectionHandler} />
-        <Computer computerSelection={this.state.computerSelection} />
-        <Result user={this.state.userChoice} computer={this.state.computerSelection} playAgainHandler={this.playAgainHandler} />
+      <div>
+        <div className="header">
+          <h1>Rock, Paper, Scissors</h1>
+        </div>
+        <div className="container">
+          <div className="game-board">
+            <User userSelectionHandler={this.userSelectionHandler} selected={this.state.userChoice} />
+            <Computer computerSelection={this.state.computerSelection} />
+            <br />
+          </div>
+          <br />
+          <Result user={this.state.userChoice} computer={this.state.computerSelection} playAgainHandler={this.playAgainHandler} />
+        </div>
       </div>
     )
   }
